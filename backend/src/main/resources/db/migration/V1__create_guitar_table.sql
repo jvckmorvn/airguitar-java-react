@@ -1,0 +1,5 @@
+CREATE TABLE guitar (
+    id BIGINT NOT NULL AUTO_INCREMENT,
+    model VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id)
+);
