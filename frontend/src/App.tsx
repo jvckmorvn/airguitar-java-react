@@ -2,6 +2,7 @@ import './App.css'
 import { useState, useEffect } from "react";
 import viteLogo from "/vite.svg";
 import reactLogo from "./assets/react.svg";
+import axios from "axios";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -9,10 +10,11 @@ function App() {
 
   useEffect(() => {
     async function fetchMessage() {
+      const guitarId = "1";
+
       try {
-        const response = await fetch("http://localhost:8080/");
-        const text = await response.text(); // backend returns a String
-        setMessage(text);
+        const { data } = await axios.get(`http://localhost:8080/guitars/${guitarId}`);
+        setMessage(data.model);
       } catch (err) {
         console.error(err);
         setMessage("Error fetching message");

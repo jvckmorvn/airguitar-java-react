@@ -1,6 +1,7 @@
 package com.example.airguitar.service;
 
-import com.example.airguitar.model.Guitar;
+import com.example.airguitar.mapper.GuitarMapper;
+import com.example.airguitar.model.dto.GuitarDTO;
 import com.example.airguitar.repository.GuitarRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -12,9 +13,19 @@ import java.util.List;
 public class GuitarService {
 
     private final GuitarRepository guitarRepository;
+    private final GuitarMapper guitarMapper;
 
-    public List<Guitar> getAll() {
-        return guitarRepository.findAll();
+    public List<GuitarDTO> findAll() {
+        return guitarRepository.findAll()
+            .stream()
+            .map(guitarMapper::toDto)
+            .toList();
+    }
+
+    public GuitarDTO findById(Long id) {
+        return guitarRepository.findById(id)
+            .map(guitarMapper::toDto)
+            .orElse(null);
     }
 
 }

@@ -10,4 +10,5 @@ public class Guitar {
     public Long id;
 
     public String model;
+
 }
