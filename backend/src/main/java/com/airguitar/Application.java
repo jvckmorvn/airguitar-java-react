@@ -1,4 +1,4 @@
-package com.example.airguitar;
+package com.airguitar;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

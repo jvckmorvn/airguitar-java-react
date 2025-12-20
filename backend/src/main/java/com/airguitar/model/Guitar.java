@@ -1,4 +1,4 @@
-package com.example.airguitar.model;
+package com.airguitar.model;
 
 import jakarta.persistence.*;
 

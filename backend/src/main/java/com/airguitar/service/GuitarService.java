@@ -1,4 +1,4 @@
-package com.example.airguitar.service;
+package com.airguitar.service;
 
 import com.example.airguitar.mapper.GuitarMapper;
 import com.example.airguitar.model.dto.GuitarDTO;

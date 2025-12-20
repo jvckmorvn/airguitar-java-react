@@ -1,4 +1,4 @@
-package com.example.airguitar.model.dto;
+package com.airguitar.model.dto;
 
 import lombok.Data;
 
