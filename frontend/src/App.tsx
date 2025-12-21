@@ -1,13 +1,6 @@
 import './App.css';
-import { useState, useEffect } from 'react';
-import viteLogo from '/vite.svg';
-import reactLogo from './assets/react.svg';
-import axios from 'axios';
+import HomePage from './pages/HomePage';
 
-function App() {
-  return (
-    <HomePage />
-  );
+export default function App() {
+  return <HomePage />;
 }
-
-export default App;
