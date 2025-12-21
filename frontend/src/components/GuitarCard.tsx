@@ -5,14 +5,14 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import CardActionArea from '@mui/material/CardActionArea';
 import CardActions from '@mui/material/CardActions';
-import { useGetGuitar } from '../hooks/useGuitar';
+import type { Guitar } from '../types/Guitar';
 
 interface GuitarCardProps {
-  guitarId: string;
+  guitar: Guitar;
 }
 
-export default function GuitarCard({ guitarId }: GuitarCardProps) {
-  const { data } = useGetGuitar(guitarId);
+export default function GuitarCard({ guitar }: GuitarCardProps) {
+  const { manufacturer, model } = guitar;
 
   return (
     <Card sx={{ maxWidth: 345 }}>
@@ -25,7 +25,7 @@ export default function GuitarCard({ guitarId }: GuitarCardProps) {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            {`${data?.manufacturer} ${data?.model}` ?? 'Loading...'}
+            {manufacturer} {model}
           </Typography>
         </CardContent>
       </CardActionArea>

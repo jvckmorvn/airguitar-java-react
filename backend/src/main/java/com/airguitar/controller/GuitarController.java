@@ -3,10 +3,7 @@ package com.airguitar.controller;
 import com.airguitar.model.dto.GuitarDTO;
 import com.airguitar.service.GuitarService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -18,11 +15,9 @@ public class GuitarController {
     private final GuitarService guitarService;
 
     @GetMapping
-    public List<GuitarDTO> index() {
-        return guitarService.findAll();
-    }
+    public List<GuitarDTO> index(@RequestParam List<String> ids) { return guitarService.findByIds(ids); }
 
     @GetMapping("/{id}")
-    public GuitarDTO show(@PathVariable Long id) { return guitarService.findById(id); }
+    public GuitarDTO show(@PathVariable String id) { return guitarService.findById(id); }
 
 }

@@ -15,17 +15,16 @@ public class GuitarService {
     private final GuitarRepository guitarRepository;
     private final GuitarMapper guitarMapper;
 
-    public List<GuitarDTO> findAll() {
-        return guitarRepository.findAll()
-            .stream()
-            .map(guitarMapper::toDto)
-            .toList();
+    public List<GuitarDTO> findByIds(List<String> ids) {
+        return guitarRepository.findAllById(ids)
+                .stream()
+                .map(guitarMapper::toDto)
+                .toList();
     }
 
-    public GuitarDTO findById(Long id) {
+    public GuitarDTO findById(String id) {
         return guitarRepository.findById(id)
-            .map(guitarMapper::toDto)
-            .orElse(null);
+                .map(guitarMapper::toDto)
+                .orElse(null);
     }
-
 }
