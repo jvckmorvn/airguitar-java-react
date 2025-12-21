@@ -11,4 +11,6 @@ public class Guitar {
 
     public String model;
 
+    public String manufacturer;
+
 }

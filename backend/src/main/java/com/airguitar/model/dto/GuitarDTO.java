@@ -7,5 +7,6 @@ public class GuitarDTO {
 
     public Long id;
     public String model;
+    public String manufacturer;
 
 }
