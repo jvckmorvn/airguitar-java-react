@@ -13,7 +13,7 @@ export default function GuitarGrid() {
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={3}>
         {data.map((guitar) => (
-          <Grid item key={guitar.id}>
+          <Grid key={guitar.id}>
             <GuitarCard guitar={guitar} />
           </Grid>
         ))}
