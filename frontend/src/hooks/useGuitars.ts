@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { getGuitar } from '../api/guitars';
+import { getGuitars, getGuitar } from '../api/guitars';
 
 export function useGetGuitars(guitarIds: string[]) {
   return useQuery({

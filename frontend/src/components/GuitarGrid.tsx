@@ -4,7 +4,7 @@ import GuitarCard from './GuitarCard';
 import { useGetGuitars } from '../hooks/useGuitars';
 
 export default function GuitarGrid() {
-  const guitarIds = ["1"];
+  const guitarIds = ['1'];
   const { data, isLoading } = useGetGuitars(guitarIds);
 
   if (isLoading || !data) return null;

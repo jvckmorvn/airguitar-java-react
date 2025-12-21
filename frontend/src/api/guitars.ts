@@ -4,9 +4,7 @@ import type { Guitar } from '../types/guitar';
 
 export async function getGuitars(guitarIds: string[]): Promise<Guitar[]> {
   const { data } = await axios.get(ENDPOINTS.GET_GUITARS, {
-    params: {
-      ids: guitarIds,
-    },
+    params: { ids: guitarIds }
   });
 
   return data;
