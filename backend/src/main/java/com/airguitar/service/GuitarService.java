@@ -1,8 +1,8 @@
 package com.airguitar.service;
 
-import com.example.airguitar.mapper.GuitarMapper;
-import com.example.airguitar.model.dto.GuitarDTO;
-import com.example.airguitar.repository.GuitarRepository;
+import com.airguitar.mapper.GuitarMapper;
+import com.airguitar.model.dto.GuitarDTO;
+import com.airguitar.repository.GuitarRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

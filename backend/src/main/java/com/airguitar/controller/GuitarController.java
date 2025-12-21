@@ -1,7 +1,7 @@
 package com.airguitar.controller;
 
-import com.example.airguitar.model.dto.GuitarDTO;
-import com.example.airguitar.service.GuitarService;
+import com.airguitar.model.dto.GuitarDTO;
+import com.airguitar.service.GuitarService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
