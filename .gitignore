@@ -26,5 +26,5 @@ build/
 ### VS Code ###
 .vscode/
 
-## MacOS
+### MacOS ###
 .DS_Store
