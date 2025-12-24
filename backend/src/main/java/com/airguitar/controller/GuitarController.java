@@ -15,9 +15,15 @@ public class GuitarController {
     private final GuitarService guitarService;
 
     @GetMapping
-    public List<GuitarDTO> index(@RequestParam List<String> ids) { return guitarService.findByIds(ids); }
+    public List<GuitarDTO> index(@RequestParam(required = false) List<String> ids) {
+        if (ids == null || ids.isEmpty()) {
+            return guitarService.findAll();
+        }
+
+        return guitarService.findByIds(ids);
+    }
 
     @GetMapping("/{id}")
-    public GuitarDTO show(@PathVariable String id) { return guitarService.findById(id); }
+    public GuitarDTO show(@PathVariable String id) { return guitarService.findById(id).orElse(null); }
 
 }
