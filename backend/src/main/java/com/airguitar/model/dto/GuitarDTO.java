@@ -1,12 +1,3 @@
 package com.airguitar.model.dto;
 
-import lombok.Data;
-
-@Data
-public class GuitarDTO {
-
-    public Long id;
-    public String model;
-    public String manufacturer;
-
-}
+public record GuitarDTO(String model, String manufacturer) {}

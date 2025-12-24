@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
@@ -24,14 +25,25 @@ public class GuitarService {
     }
 
     public List<GuitarDTO> findByIds(List<String> ids) {
-        return guitarRepository.findAllById(ids)
+        if (ids == null || ids.isEmpty()) {
+            return findAll();
+        }
+
+        List<UUID> uuids = ids.stream()
+            .map(UUID::fromString)
+            .toList();
+
+        return guitarRepository.findAllById(uuids)
             .stream()
             .map(guitarMapper::toDto)
             .toList();
     }
 
     public Optional<GuitarDTO> findById(String id) {
-        return guitarRepository.findById(id)
+        UUID uuid = UUID.fromString(id);
+
+        return guitarRepository.findById(uuid)
             .map(guitarMapper::toDto);
     }
+
 }
