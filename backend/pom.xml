@@ -12,25 +12,70 @@
         <relativePath/>
     </parent>
 
-    <groupId>com.example</groupId>
-    <artifactId>airguitar</artifactId>
+    <groupId>com.airguitar</groupId>
+    <artifactId>backend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>airguitar</name>
-    <description>Instrument sharing service</description>
+    <packaging>jar</packaging>
+
+    <name>AirGuitar Backend</name>
+    <description>Backend module for AirGuitar</description>
 
     <properties>
+<<<<<<< HEAD
         <java.version>17</java.version>
+    </properties>
+
+    <dependencies>
+=======
+        <java.version>21</java.version>
+        <lombok.version>1.18.30</lombok.version>
+        <mapstruct.version>1.5.5.Final</mapstruct.version>
+        <maven.compiler.plugin.version>3.13.0</maven.compiler.plugin.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+>>>>>>> cab18b566a6f403f4d3a160dc479baecc3728418
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+<<<<<<< HEAD
 
+=======
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+>>>>>>> cab18b566a6f403f4d3a160dc479baecc3728418
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-api</artifactId>
+            <version>0.11.5</version>
+        </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-impl</artifactId>
+            <version>0.11.5</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-jackson</artifactId>
+            <version>0.11.5</version>
+            <scope>runtime</scope>
         </dependency>
 
         <dependency>
@@ -58,17 +103,21 @@
         <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct</artifactId>
-            <version>1.5.5.Final</version>
+            <version>${mapstruct.version}</version>
         </dependency>
+<<<<<<< HEAD
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+=======
+>>>>>>> cab18b566a6f403f4d3a160dc479baecc3728418
     </dependencies>
 
     <build>
+        <directory>${project.basedir}/build</directory>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -78,17 +127,28 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+<<<<<<< HEAD
                 <configuration>
+=======
+                <version>${maven.compiler.plugin.version}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+>>>>>>> cab18b566a6f403f4d3a160dc479baecc3728418
                     <annotationProcessorPaths>
                         <path>
                             <groupId>org.mapstruct</groupId>
                             <artifactId>mapstruct-processor</artifactId>
-                            <version>1.5.5.Final</version>
+                            <version>${mapstruct.version}</version>
                         </path>
                         <path>
                             <groupId>org.projectlombok</groupId>
                             <artifactId>lombok</artifactId>
+<<<<<<< HEAD
                             <version>1.18.32</version>
+=======
+                            <version>${lombok.version}</version>
+>>>>>>> cab18b566a6f403f4d3a160dc479baecc3728418
                         </path>
                     </annotationProcessorPaths>
                 </configuration>
