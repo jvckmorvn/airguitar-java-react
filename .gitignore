@@ -28,3 +28,10 @@ build/
 
 ### MacOS ###
 .DS_Store
+
+### Build Artifacts ###
+target/
+backend/target/
+frontend/dist/
+frontend/node_modules/
+node_modules/
