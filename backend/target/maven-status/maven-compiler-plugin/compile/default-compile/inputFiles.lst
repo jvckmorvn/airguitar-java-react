@@ -1,8 +1,0 @@
-/Users/jackmoran/Documents/Personal/airguitar/backend/src/main/java/com/example/airguitar/Application.java
-/Users/jackmoran/Documents/Personal/airguitar/backend/src/main/java/com/example/airguitar/config/WebConfiguration.java
-/Users/jackmoran/Documents/Personal/airguitar/backend/src/main/java/com/example/airguitar/controller/GuitarController.java
-/Users/jackmoran/Documents/Personal/airguitar/backend/src/main/java/com/example/airguitar/mapper/GuitarMapper.java
-/Users/jackmoran/Documents/Personal/airguitar/backend/src/main/java/com/example/airguitar/model/Guitar.java
-/Users/jackmoran/Documents/Personal/airguitar/backend/src/main/java/com/example/airguitar/model/dto/GuitarDTO.java
-/Users/jackmoran/Documents/Personal/airguitar/backend/src/main/java/com/example/airguitar/repository/GuitarRepository.java
-/Users/jackmoran/Documents/Personal/airguitar/backend/src/main/java/com/example/airguitar/service/GuitarService.java
