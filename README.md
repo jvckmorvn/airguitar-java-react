@@ -1,4 +1,4 @@
-# Airguitar (Java + React MVP)
+# Airguitar
 
 Airguitar is an Airbnb-style marketplace for renting musical instruments.  
 This repository uses a modular monolith backend (Spring Boot) and a React + TypeScript frontend.
