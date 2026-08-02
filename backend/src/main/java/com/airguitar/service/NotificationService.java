@@ -25,7 +25,7 @@ public class NotificationService {
         notification.setType(type);
         notification.setTitle(title);
         notification.setBody(body);
-        notification.setRead(false);
+        notification.setSeen(false);
         notification.setCreatedAt(Instant.now());
         Notification saved = notificationRepository.save(notification);
         messagingTemplate.convertAndSend("/topic/users/" + userId + "/notifications", saved);
@@ -42,7 +42,7 @@ public class NotificationService {
         if (!notification.getUserId().equals(userId)) {
             throw new IllegalArgumentException("Cannot modify another user's notification");
         }
-        notification.setRead(true);
+        notification.setSeen(true);
         return notificationRepository.save(notification);
     }
 }

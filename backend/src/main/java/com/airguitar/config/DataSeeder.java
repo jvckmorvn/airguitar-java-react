@@ -95,7 +95,7 @@ public class DataSeeder {
             bookingNotification.setType(NotificationType.BOOKING_CREATED);
             bookingNotification.setTitle("Sample booking created");
             bookingNotification.setBody("Riley requested your Fender Stratocaster.");
-            bookingNotification.setRead(false);
+            bookingNotification.setSeen(false);
             bookingNotification.setCreatedAt(Instant.now().minusSeconds(1800));
             notificationRepository.save(bookingNotification);
 
@@ -104,7 +104,7 @@ public class DataSeeder {
             messageNotification.setType(NotificationType.MESSAGE_RECEIVED);
             messageNotification.setTitle("Sample message received");
             messageNotification.setBody("You have a new message about Fender Stratocaster 2022.");
-            messageNotification.setRead(false);
+            messageNotification.setSeen(false);
             messageNotification.setCreatedAt(Instant.now().minusSeconds(1200));
             notificationRepository.save(messageNotification);
         };

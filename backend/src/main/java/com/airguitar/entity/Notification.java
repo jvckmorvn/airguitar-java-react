@@ -33,7 +33,7 @@ public class Notification {
     private String body;
 
     @Column(nullable = false)
-    private boolean read;
+    private boolean seen;
 
     @Column(nullable = false)
     private Instant createdAt;
@@ -43,13 +43,13 @@ public class Notification {
     public NotificationType getType() { return type; }
     public String getTitle() { return title; }
     public String getBody() { return body; }
-    public boolean isRead() { return read; }
+    public boolean isSeen() { return seen; }
     public Instant getCreatedAt() { return createdAt; }
     public void setId(Long id) { this.id = id; }
     public void setUserId(Long userId) { this.userId = userId; }
     public void setType(NotificationType type) { this.type = type; }
     public void setTitle(String title) { this.title = title; }
     public void setBody(String body) { this.body = body; }
-    public void setRead(boolean read) { this.read = read; }
+    public void setSeen(boolean read) { this.seen = read; }
     public void setCreatedAt(Instant createdAt) { this.createdAt = createdAt; }
 }
